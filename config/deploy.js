@@ -1,5 +1,4 @@
 /* jshint node: true */
-
 module.exports = function(deployTarget) {
   var ENV = {
     build: {
@@ -7,22 +6,28 @@ module.exports = function(deployTarget) {
     },
     'revision-data': {
       type: 'git-commit'
+    },
+    cloudfront: {
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      distribution: 'E1WL76Z1Y3ZMR2'
     }
-    // include other plugin configuration that applies to all deploy targets here
   };
 
   ENV['s3'] = {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    bucket: 'wedding-nixonberg',
-    region: 'us-west-1'
+    bucket: 'nixonberg.com',
+    region: 'us-west-1',
+    filePattern: '*'
   };
 
   ENV['s3-index'] = {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    bucket: 'wedding-nixonberg',
-    region: 'us-west-1'
+    bucket: 'nixonberg.com',
+    region: 'us-west-1',
+    allowOverwrite: true
   };
 
   if (deployTarget === 'development') {
