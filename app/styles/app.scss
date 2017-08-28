@@ -9,7 +9,7 @@ body {
   height: 80px;
 }
 .navbar-item {
-  padding: 0 16px;
+  padding: 0 32px;
   &:first-child {
     padding-left: 0;
   }
@@ -51,16 +51,27 @@ body {
 }
 
 .hero-body-info-content {
-  font-family: 'Satisfy', cursive;
+  padding: 12px;
   z-index: 200;
 }
 .hero-body-info-content-headline {
+  font-family: 'Satisfy', cursive;
   font-size: 120px;
+  font-weight: 400;
   line-height: 1;
   margin: 0;
 }
 .hero-body-info-content-title {
   font-size: 60px;
+  font-weight: 500;
   line-height: 1;
   margin: 0;
+}
+.hero-body-info-tint {
+  background: rgba(78, 77, 77, .25);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
