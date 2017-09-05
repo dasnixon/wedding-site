@@ -39,7 +39,8 @@ md-toolbar {
   top: 0;
   width: 100%;
 }
-@media (max-width: $layout-breakpoint-xs - 1) {
+@media (max-width: $layout-breakpoint-xs - 1),
+only screen and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
   .md-toolbar-tools a {
     margin-left: 16px;
   }

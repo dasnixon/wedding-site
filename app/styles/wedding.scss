@@ -32,3 +32,11 @@
     margin-top: 32px;
   }
 }
+@media (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+  .wedding-section {
+    margin-top: 16px;
+  }
+  .wedding-section-content-map {
+    margin-top: 32px;
+  }
+}
