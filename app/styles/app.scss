@@ -20,13 +20,14 @@ md-toolbar {
   z-index: 300;
 }
 .md-toolbar-tools a {
+  display: block;
+  font-size: 16px;
   font-weight: 600;
-  margin: 0 24px;
+  line-height: 1.25;
+  margin-left: 24px;
+  text-align: center;
   &:first-child {
-    margin: 0 0 0 24px;
-  }
-  &:last-child {
-    margin: 0 24px 0 0;
+    margin-left: 0;
   }
   &:hover {
     opacity: 0.75;
@@ -37,4 +38,17 @@ md-toolbar {
   text-align: center;
   top: 0;
   width: 100%;
+}
+@media (max-width: $layout-breakpoint-xs - 1) {
+  .md-toolbar-tools a {
+    margin-left: 16px;
+  }
+  .md-display-4 {
+    font-size: 72px !important;
+    line-height: 72px;
+  }
+  .md-display-3 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
