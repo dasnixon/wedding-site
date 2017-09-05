@@ -14,15 +14,15 @@ export default Component.extend({
   },
 
   _handleHeroHeight(overrideHeroHeight) {
-    let navbarHeight = $('.js-navbar').outerHeight();
+    let toolbarHeight = $('md-toolbar').outerHeight();
     let $hero = this.$('.js-hero');
     let heroHeight = overrideHeroHeight || $hero.outerHeight();
     if (isBlank(overrideHeroHeight)) {
       this.set('initialHeroHeight', heroHeight);
     }
     let browserHeight = $(window).height();
-    if ((navbarHeight + heroHeight) < browserHeight) {
-      $hero.css('height', browserHeight - navbarHeight);
+    if ((toolbarHeight + heroHeight) < browserHeight) {
+      $hero.css('height', browserHeight - toolbarHeight);
     }
   },
 });

@@ -1,31 +1,121 @@
-<page>
-  <centered fit class='navbar js-navbar'>
-    <centered fit class='navbar-item'>
-      <a href='#info'>The Details</a>
-    </centered>
-    <centered fit class='navbar-item'>
-      <a href='#info'>The Venue</a>
-    </centered>
-    <centered fit class='navbar-item'>
-      <a href='#info'>Where to Stay</a>
-    </centered>
-    <centered fit class='navbar-item'>
-      <a href='#info'>What to Do</a>
-    </centered>
-  </centered>
-  <div class='hero js-hero'>
-    <div class='hero-body'>
-      <div class='hero-body-info'>
-        <div class='hero-body-info-tint'></div>
-        <div class='hero-body-info-content'>
-          <h1 class='hero-body-info-content-headline'>
-            Chris & Amanda
-          </h1>
-          <h2 class='hero-body-info-content-title'>
-            Join us June 30, 2018
-          </h2>
-        </div>
+{{#paper-toolbar}}
+  {{#paper-toolbar-tools}}
+    <div class='layout-row layout-align-center-center flex'>
+      <div>
+        {{#paper-button href='#our-wedding'}}
+          Our Wedding
+        {{/paper-button}}
+      </div>
+      <div>
+        {{#paper-button href='#the-venue'}}
+          The Venue
+        {{/paper-button}}
+      </div>
+      <div>
+        {{#paper-button href='#where-to-stay'}}
+          Where to Stay
+        {{/paper-button}}
+      </div>
+      <div>
+        {{#paper-button href='#what-to-do'}}
+          What to Do
+        {{/paper-button}}
+      </div>
+    </div>
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+<div class='hero js-hero'>
+  <div class='hero-body'>
+    <div class='hero-body-info'>
+      <div class='hero-body-info-tint'></div>
+      <div class='hero-body-info-content'>
+        <h1 class='hero-body-info-content-headline'>
+          Chris & Amanda
+        </h1>
+        <h2 class='hero-body-info-content-title'>
+          Join us June 30, 2018
+        </h2>
       </div>
     </div>
   </div>
-</page>
+</div>
+
+{{#paper-content class='wedding layout-column'}}
+  <section id='our-wedding' class='wedding-section'>
+    <div class='wedding-section-content'>
+      <div class='md-display-3 u-Satisfy'>
+        Our Wedding
+      </div>
+      {{#paper-list}}
+        {{#paper-item}}
+          <div class='layout-column'>
+            <div class='md-headline'>Time, Date, & Arrival</div>
+            <div class='md-subhead-1'>
+              Ceremony begins at 4:30 PM on June 30, 2018. <span class='u-bold'>Please arrive at 4 PM</span>.
+            </div>
+          </div>
+        {{/paper-item}}
+        {{#paper-item}}
+          <div class='layout-column'>
+            <div class='md-headline'>Transportation</div>
+            <div class='md-subhead-1'>
+              We will be providing 2 35-person shuttles to & from
+              Cloverdale, CA/Hopland, CA & the wedding venue.
+            </div>
+            <div class='md-subhead-1'>
+              <i>
+                <span class='u-bold'>Note for those driving</span>:
+                There is plenty of parking at the site & we will be
+                providing a ~5 minute shuttle ride from the parking area directly
+                to/from the venue.
+              </i>
+            </div>
+          </div>
+        {{/paper-item}}
+        {{#paper-item}}
+          <div class='layout-column'>
+            <div class='md-headline'>Weather</div>
+            <div class='md-subhead-1'>
+              This is an outdoor wedding and we expect it to be hot as fuck (in the upper 80s).
+              There will be plenty of refreshments (especially beer) and a large
+              tent to keep you cool. Bring your sunglasses, deoderant,
+              & beach towel (just kidding). Don't worry, it should cool off
+              around dinner & by dancing it will be perfect. Brace yourselves, summer is coming.
+            </div>
+          </div>
+        {{/paper-item}}
+      {{/paper-list}}
+    </div>
+  </section>
+  <section id='the-venue' class='wedding-section'>
+    <div class='wedding-section-content'>
+      <div class='layout-row'>
+        <div class='flex-50'>
+          <div class='md-display-3 u-Satisfy'>The Venue</div>
+          <div class='md-headline'>
+            Contento Vineyard - Hopland, CA
+          </div>
+          <div class='md-subhead-1'>
+            <a href='https://goo.gl/maps/5UsUkJmexdP2' title='Contento Vineyard Wedding location' target='_blank' rel='noopener noreferrer'>
+              Old Toll Rd, Hopland, CA 95449
+            </a>
+          </div>
+        </div>
+        <div class='flex-50 wedding-section-content-map'>
+          <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.7047570965246!2d-123.07261348421814!3d38.97640907955866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8083e271a00e454d%3A0xec03424516d3a239!2sEntrance+to+Brutocao+Winery+Contento+Site!5e0!3m2!1sen!2sus!4v1504567157333' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='where-to-stay' class='wedding-section'>
+    <div class='wedding-section-content'>
+      <div class='md-display-3 u-Satisfy'>Where to Stay</div>
+    </div>
+  </section>
+  <section id='what-to-do' class='wedding-section'>
+    <div class='wedding-section-content'>
+      <div class='md-display-3 u-Satisfy'>What to Do</div>
+    </div>
+  </section>
+{{/paper-content}}
