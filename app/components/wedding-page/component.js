@@ -22,7 +22,7 @@ export default Component.extend({
     }
     let browserHeight = $(window).height();
     if ((toolbarHeight + heroHeight) < browserHeight) {
-      $hero.css('height', browserHeight - toolbarHeight);
+      $hero.css('height', browserHeight);
     }
   },
 });

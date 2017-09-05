@@ -16,3 +16,25 @@ body > div.ember-view {
 #main {
   position: relative;
 }
+md-toolbar {
+  z-index: 300;
+}
+.md-toolbar-tools a {
+  font-weight: 600;
+  margin: 0 24px;
+  &:first-child {
+    margin: 0 0 0 24px;
+  }
+  &:last-child {
+    margin: 0 24px 0 0;
+  }
+  &:hover {
+    opacity: 0.75;
+  }
+}
+.md-toolbar-fixed {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}

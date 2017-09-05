@@ -1,25 +1,17 @@
-{{#paper-toolbar}}
+{{#paper-toolbar class='md-toolbar-fixed'}}
   {{#paper-toolbar-tools}}
     <div class='layout-row layout-align-center-center flex'>
       <div>
-        {{#paper-button href='#our-wedding'}}
-          Our Wedding
-        {{/paper-button}}
+        {{scroll-to href='#our-wedding' label='Our Wedding' offset=-64 title='Our Wedding'}}
       </div>
       <div>
-        {{#paper-button href='#the-venue'}}
-          The Venue
-        {{/paper-button}}
+        {{scroll-to href='#the-venue' label='The Venue' offset=-64 title='The Venue'}}
       </div>
       <div>
-        {{#paper-button href='#where-to-stay'}}
-          Where to Stay
-        {{/paper-button}}
+        {{scroll-to href='#where-to-stay' label='Where to Stay' offset=-64 title='Where to Stay'}}
       </div>
       <div>
-        {{#paper-button href='#what-to-do'}}
-          What to Do
-        {{/paper-button}}
+        {{scroll-to href='#where-to-do' label='What to Do' offset=-64 title='What to Do'}}
       </div>
     </div>
   {{/paper-toolbar-tools}}
@@ -63,7 +55,7 @@
               We will be providing 2 35-person shuttles to & from
               Cloverdale, CA/Hopland, CA & the wedding venue.
             </div>
-            <div class='md-subhead-1'>
+            <div class='md-body-1'>
               <i>
                 <span class='u-bold'>Note for those driving</span>:
                 There is plenty of parking at the site & we will be
@@ -77,11 +69,11 @@
           <div class='layout-column'>
             <div class='md-headline'>Weather</div>
             <div class='md-subhead-1'>
-              This is an outdoor wedding and we expect it to be hot as fuck (in the upper 80s).
-              There will be plenty of refreshments (especially beer) and a large
+              This is an outdoor wedding & we expect it to be hot as fuck (in the upper 80s).
+              There will be plenty of refreshments (especially beer) & a large
               tent to keep you cool. Bring your sunglasses, deoderant,
               & beach towel (just kidding). Don't worry, it should cool off
-              around dinner & by dancing it will be perfect. Brace yourselves, summer is coming.
+              around dinner, & by dancing it will be perfect. Brace yourselves, summer is coming.
             </div>
           </div>
         {{/paper-item}}
@@ -90,8 +82,8 @@
   </section>
   <section id='the-venue' class='wedding-section'>
     <div class='wedding-section-content'>
-      <div class='layout-row'>
-        <div class='flex-50'>
+      <div class='layout-row layout-wrap'>
+        <div class='flex-100 flex-gt-xs-50'>
           <div class='md-display-3 u-Satisfy'>The Venue</div>
           <div class='md-headline'>
             Contento Vineyard - Hopland, CA
@@ -102,7 +94,7 @@
             </a>
           </div>
         </div>
-        <div class='flex-50 wedding-section-content-map'>
+        <div class='flex-100 flex-gt-xs-50 wedding-section-content-map'>
           <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.7047570965246!2d-123.07261348421814!3d38.97640907955866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8083e271a00e454d%3A0xec03424516d3a239!2sEntrance+to+Brutocao+Winery+Contento+Site!5e0!3m2!1sen!2sus!4v1504567157333' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>
         </div>
       </div>
@@ -111,6 +103,30 @@
   <section id='where-to-stay' class='wedding-section'>
     <div class='wedding-section-content'>
       <div class='md-display-3 u-Satisfy'>Where to Stay</div>
+      <p class='md-subhead-1'>
+        We recommend staying at one of the hotels below where a shuttle will take
+        you to & from our wedding.
+      </p>
+      {{#paper-item}}
+        <div class='layout-column'>
+          <div class='md-headline'>Basic Lodging</div>
+          <div class='md-subhead-1'>
+            <a href='https://www.cloverdalevalleyinn.com/' target='_blank' rel='noopener noreferrer' title='Vineyard Valley Inn'>Vineyard Valley Inn</a>
+            <span>or</span>
+            <a href='http://cloverdalewinecountryinn.com/' target='_blank' rel='noopener noreferrer' title='Cloverdale Wine Country Inn & Suites'>Cloverdale Wine Country Inn & Suites</a>.
+          </div>
+        </div>
+      {{/paper-item}}
+      {{#paper-item}}
+        <div class='layout-column'>
+          <div class='md-headline'>Bed & Breakfast</div>
+          <div class='md-subhead-1'>
+            <a href='http://winegardeninn.com/' target='_blank' rel='noopener noreferrer' title='Kelly & Young Wine Garden Inn'>Kelly & Young Wine Garden Inn</a>
+            <span>or</span>
+            <a href='http://www.sonomabedbreakfastinnwinecountry.com/' target='_blank' rel='noopener noreferrer' title='Auberge on the Vineyard'>Auberge on the Vineyard</a>.
+          </div>
+        </div>
+      {{/paper-item}}
     </div>
   </section>
   <section id='what-to-do' class='wedding-section'>
