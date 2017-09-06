@@ -42,7 +42,12 @@ md-toolbar {
 }
 @media (max-width: $layout-breakpoint-xs - 1),
 only screen and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+  .md-toolbar-tools {
+    height: 64px;
+    min-height: 64px;
+  }
   .md-toolbar-tools a {
+    font-size: 13px;
     margin-left: 16px;
   }
   .md-display-4 {
