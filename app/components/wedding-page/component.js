@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
-const { Component, run, isBlank, $ } = Ember;
+const { Component, run, isBlank, $, inject } = Ember;
 
 export default Component.extend({
+  scroller: inject.service(),
+
   didInsertElement() {
     run.scheduleOnce('afterRender', this, this.handleHeroHeight);
     this.get('orientation').on('tilt', this.handleHeroHeight.bind(this));
@@ -25,4 +27,8 @@ export default Component.extend({
       $hero.css('height', browserHeight);
     }
   },
+
+  scrollToOurWeddingAnchor() {
+    this.get('scroller').scrollVertical(this.$('#our-wedding'), { offset: -64 });
+  }
 });

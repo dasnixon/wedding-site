@@ -27,6 +27,11 @@
         </div>
       </div>
     </div>
+    <div class=''>
+      {{#paper-button onClick=(action scrollToOurWeddingAnchor) raised=true primary=true}}
+        More Wedding Details
+      {{/paper-button}}
+    </div>
   </div>
 </div>
 
@@ -83,7 +88,7 @@
         <div class='flex-100 flex-gt-xs-50'>
           <div class='md-display-3 u-Satisfy'>The Venue</div>
           <div class='md-headline'>
-            Contento Vineyard - Hopland, CA
+            <a href='http://www.brutocaoschoolhouseplaza.com/contento-vineyard-site.html' title='Contento Vineyard' target='_blank' rel='noopener noreferrer'>Contento Vineyard</a> - Hopland, CA
           </div>
           <div class='md-subhead-1'>
             <a href='https://goo.gl/maps/5UsUkJmexdP2' title='Contento Vineyard Wedding location' target='_blank' rel='noopener noreferrer'>
@@ -107,21 +112,27 @@
       {{#paper-item}}
         <div class='layout-column'>
           <div class='md-headline'>Basic Lodging</div>
-          <div class='md-subhead-1'>
-            <a href='https://www.cloverdalevalleyinn.com/' target='_blank' rel='noopener noreferrer' title='Vineyard Valley Inn'>Vineyard Valley Inn</a>
-            <span>or</span>
-            <a href='http://cloverdalewinecountryinn.com/' target='_blank' rel='noopener noreferrer' title='Cloverdale Wine Country Inn & Suites'>Cloverdale Wine Country Inn & Suites</a>.
-          </div>
+          <ul>
+            <li>
+              <a href='https://www.cloverdalevalleyinn.com/' target='_blank' rel='noopener noreferrer' title='Vineyard Valley Inn'>Vineyard Valley Inn</a>
+            </li>
+            <li>
+              <a href='http://cloverdalewinecountryinn.com/' target='_blank' rel='noopener noreferrer' title='Cloverdale Wine Country Inn & Suites'>Cloverdale Wine Country Inn & Suites</a>
+            </li>
+          </ul>
         </div>
       {{/paper-item}}
       {{#paper-item}}
         <div class='layout-column'>
           <div class='md-headline'>Bed & Breakfast</div>
-          <div class='md-subhead-1'>
-            <a href='http://winegardeninn.com/' target='_blank' rel='noopener noreferrer' title='Kelly & Young Wine Garden Inn'>Kelly & Young Wine Garden Inn</a>
-            <span>or</span>
-            <a href='http://www.sonomabedbreakfastinnwinecountry.com/' target='_blank' rel='noopener noreferrer' title='Auberge on the Vineyard'>Auberge on the Vineyard</a>.
-          </div>
+          <ul>
+            <li>
+              <a href='http://winegardeninn.com/' target='_blank' rel='noopener noreferrer' title='Kelly & Young Wine Garden Inn'>Kelly & Young Wine Garden Inn</a>
+            </li>
+            <li>
+              <a href='http://www.sonomabedbreakfastinnwinecountry.com/' target='_blank' rel='noopener noreferrer' title='Auberge on the Vineyard'>Auberge on the Vineyard</a>
+            </li>
+          </ul>
         </div>
       {{/paper-item}}
     </div>
