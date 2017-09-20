@@ -22,11 +22,6 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    ifa: {
-      enabled: true,
-      inline: false
-    },
-
     googleFonts: [
       'Satisfy',
       'Raleway:400,600,700'

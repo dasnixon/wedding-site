@@ -1,14 +1,18 @@
 /* eslint-env node */
-const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const EmberApp = require('ember-cli/lib/broccoli/ember-app'),
+  writeFile = require('broccoli-file-creator'),
+  md5 = require('md5');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
+  const fingerprintHash = md5(Date.now());
+
+  let app = new EmberApp(defaults, {
+    fingerprint: {
+      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'json'], // list of extensions to fingerprint
+      customHash: fingerprintHash //use a single fingeprint/hash for all assets
+    },
     dotEnv: {
       clientAllowedKeys: ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
-    },
-    fingerprint: {
-      generateAssetMap: true,
-      fingerprintAssetMap: true
     }
     // Add options here
   });
@@ -26,5 +30,7 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  let assetFingerprintTree = writeFile('./assets/assets-fingerprint.js', `(function(_window){ _window.ASSET_FINGERPRINT_HASH = "${(app.env === 'production' ? `-${fingerprintHash}` : '')}"; })(window);`);
+
+  return app.toTree(assetFingerprintTree);
 };

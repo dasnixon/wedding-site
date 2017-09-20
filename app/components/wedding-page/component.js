@@ -4,7 +4,6 @@ const { Component, run, isBlank, $, inject, computed } = Ember;
 
 export default Component.extend({
   scroller: inject.service(),
-  assetMap: inject.service(),
 
   didInsertElement() {
     run.scheduleOnce('afterRender', this, this.handleHeroHeight);
@@ -15,10 +14,9 @@ export default Component.extend({
   imageLetters: 'abcdefghijklmnopqrst'.split(''),
 
   images: computed('imageLetters.[]', function() {
-    let assetMap = this.get('assetMap');
     return this.get('imageLetters').map((letter) => {
       return {
-        src: assetMap.resolve(`assets/images/wedding-${letter}.png`),
+        src: `assets/images/wedding-${letter}${window.ASSET_FINGERPRINT_HASH}.png`,
         w: 600,
         h: 600,
         title: 'Our photos'

@@ -43,8 +43,8 @@
     gutter="2px" as |grid|}}
 
     {{#photo-swipe items=images as |img|}}
-      {{#grid.tile rowspan=1 colspan=1 as |tile|}}
-      1 <img src={{img.src}} alt={{img.title}} title={{img.title}} />
+      {{#grid.tile rowspan=1 colspan=1}}
+        <img src={{img.src}} title={{img.title}} alt={{img.title}} />
       {{/grid.tile}}
     {{/photo-swipe}}
 
