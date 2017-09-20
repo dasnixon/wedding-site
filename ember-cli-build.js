@@ -5,6 +5,11 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     dotEnv: {
       clientAllowedKeys: ['AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY']
+    },
+    fingerprint: {
+      prepend: 'https://d6kj2kjnxtaea.cloudfront.net/',
+      generateAssetMap: true,
+      fingerprintAssetMap: true
     }
     // Add options here
   });

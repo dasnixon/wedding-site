@@ -1,6 +1,7 @@
 {
   "name": "wedding",
   "dependencies": {
-    "countdownjs": "^2.6.0"
+    "countdownjs": "^2.6.0",
+    "photoswipe": "^4.1.2"
   }
 }
