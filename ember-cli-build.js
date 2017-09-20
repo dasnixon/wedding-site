@@ -8,7 +8,7 @@ module.exports = function(defaults) {
 
   let app = new EmberApp(defaults, {
     fingerprint: {
-      prepend: 'd6kj2kjnxtaea.cloudfront.net/',
+      prepend: 'https://d6kj2kjnxtaea.cloudfront.net/',
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map', 'json'], // list of extensions to fingerprint
       customHash: fingerprintHash //use a single fingeprint/hash for all assets
     },
