@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Component, run, isBlank, $, inject, computed } = Ember;
+const { Component, run, isBlank, $, inject, computed, getOwner } = Ember;
 
 export default Component.extend({
   scroller: inject.service(),
@@ -15,8 +15,10 @@ export default Component.extend({
 
   images: computed('imageLetters.[]', function() {
     return this.get('imageLetters').map((letter) => {
+      let config = getOwner(this).resolveRegistration('config:environment');
+      let startsWith = config.environment === 'production' ? 'https://d6kj2kjnxtaea.cloudfront.net/' : '';
       return {
-        src: `assets/images/wedding-${letter}${window.ASSET_FINGERPRINT_HASH}.png`,
+        src: `${startsWith}assets/images/wedding-${letter}${window.ASSET_FINGERPRINT_HASH}.png`,
         w: 600,
         h: 600,
         title: 'Our photos'
