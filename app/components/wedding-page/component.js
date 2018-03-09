@@ -45,5 +45,10 @@ export default Component.extend({
 
   scrollToOurWeddingAnchor() {
     this.get('scroller').scrollVertical(this.$('#our-wedding'), { offset: -64 });
+  },
+
+  goToRegistry() {
+    let win = window.open('https://www.zola.com/registry/nixonberg', '_blank');
+    win.focus();
   }
 });

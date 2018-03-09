@@ -4,7 +4,7 @@
 .hero-body {
   align-items: center;
   background-color: #4e4d4d;
-  background-image: url(/assets/images/main-bg.png);
+  background-image: url(/assets/images/main-bg.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -47,3 +47,10 @@
   top: 0;
   z-index: 100;
 }
+@media (max-width: $layout-breakpoint-xs - 1),
+only screen and (max-width: $layout-breakpoint-sm - 1) and (orientation: landscape) {
+  .hero-body {
+    background-image: url(/assets/images/main-bg-sm.png);
+  }
+}
+
